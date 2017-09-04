@@ -1,0 +1,124 @@
+﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mserver.db</groupId>
+	<artifactId>mserverDbSupport</artifactId>
+	<version>0.0.1-${project.environment}</version>
+	<packaging>jar</packaging>
+
+	<name>logsData</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<project.environment>local</project.environment>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<project.environment>test</project.environment>
+			</properties>
+		</profile>
+		<profile>
+			<id>product</id>
+			<properties>
+				<project.environment>product</project.environment>
+			</properties>
+		</profile>
+	</profiles>
+	<dependencies>
+		<dependency>
+			<groupId>com.easyuitools</groupId>
+			<artifactId>easyUiTools</artifactId>
+			<version>0.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.2</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.2</version>
+				<configuration>
+					<configurationFile>${basedir}/src/test/resources/mybatis-generator/generatorConfig-${project.environment}.xml</configurationFile>
+					<verbose>true</verbose>
+					<overwrite>true</overwrite>
+				</configuration>
+				<executions>
+					<execution>
+						<id>Generate MyBatis Artifacts</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.35</version>
+					</dependency>
+					<dependency>
+						<groupId>com.lenovo.btcp</groupId>
+						<artifactId>mybatis-generator-core</artifactId>
+						<!--增加了对没有默认值的字段的校验  -->
+						<version>1.3.2-btcp-03</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<!-- 要将源码放上去，需要加入这个插件 -->
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>mvn-repo</id>
+			<url>file:D:\logs\maven-repo\Repository</url>
+		</repository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>suzy2-repository</id>
+			<name>suzy2</name>
+			<url>https://raw.githubusercontent.com/SuZhenYu2/maven-repo/master/Repository</url>
+			<!-- /Repository/com/easyuitools/easyUiTools/0.0.1/easyUiTools-0.0.1-sources.jar -->
+			<!-- <url>http://git.oschina.net/suzhenyu/maven-repo/raw/master/Repository</url> -->
+		</repository>
+	</repositories>
+</project>

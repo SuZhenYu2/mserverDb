@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!-- <classPathEntry location="D:\dev_toos\myitabistoool\mysql-connector-java-5.1.26-bin.jar"/> -->
+	<context id="my" targetRuntime="MyBatis3">
+         <plugin type="org.mybatis.generator.plugins.AnnotationPlugin">
+         </plugin>
+         
+ 
+		<commentGenerator type="org.mybatis.generator.internal.DG2CommentGenerator">
+            <property name="javaFileEncoding" value="UTF-8"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="false" />
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+        
+		<!-- <commentGenerator type="org.mybatis.generator.internal.HairyCommentGenerator">
+		    <property name="javaFileEncoding" value="UTF-8"/>
+		    是否去除自动生成的注释 true：是 ： false:否 
+		    <property name="suppressAllComments" value="false" />
+		    <property name="suppressDate" value="true" />
+		  </commentGenerator>  -->
+		  <!--生产  -->
+			<!-- 
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://10.96.89.147:3306/btcp" userId="b_read"
+			password="InitlI#s#5e">
+		</jdbcConnection> -->
+		<!-- 测试环境 -->
+	<!-- 	jdbc.username=sys_temp
+jdbc.password=lenovo2015 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://mei20141114.mysql.rds.aliyuncs.com/yunpingtai"
+			userId="dev"
+			password="Developer!#%&amp;2015">
+		</jdbcConnection>
+		<javaModelGenerator targetPackage="com.mserver.dbsupport.atomic.entity"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.mserver.dbsupport.atomic.mapper"
+			targetProject="src/main/resources/mapper">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator targetPackage="com.mserver.dbsupport.atomic.mapper"
+			targetProject="src/main/java" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		 
+		<table tableName="m_citizen_recharge_product" domainObjectName="MCitizenRechargeProduct">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_citizen_recharge_product" domainObjectName="MCitizenRechargeProduct">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_citizen_wx_moneychange_record" domainObjectName="MCitizenWxMoneychangeRecord">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_citizen_moneychange_record" domainObjectName="MCitizenMoneychangeRecord">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_citizen" domainObjectName="MCitizen">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		 
+		<table tableName="m_reqrcode" domainObjectName="MReqrcode">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="weixin_user" domainObjectName="WeixinUser">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+</context>
+</generatorConfiguration>
