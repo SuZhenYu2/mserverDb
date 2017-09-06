@@ -84,8 +84,7 @@ jdbc.password=lenovo2015 -->
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table tableName="m_company" domainObjectName="MCompany">
-			<property name="useActualColumnNames" value="true"/>
-			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 </context>
 </generatorConfiguration>
