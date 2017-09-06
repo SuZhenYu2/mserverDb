@@ -71,7 +71,7 @@ jdbc.password=lenovo2015 -->
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table tableName="m_citizen" domainObjectName="MCitizen">
-			<property name="useActualColumnNames" value="true"/>
+			<!-- <property name="useActualColumnNames" value="true"/> -->
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		 
@@ -80,6 +80,10 @@ jdbc.password=lenovo2015 -->
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table tableName="weixin_user" domainObjectName="WeixinUser">
+			<property name="useActualColumnNames" value="true"/>
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_company" domainObjectName="MCompany">
 			<property name="useActualColumnNames" value="true"/>
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
