@@ -98,5 +98,8 @@ jdbc.password=lenovo2015 -->
 		<table tableName="m_userbuy_record" domainObjectName="MUserbuyRecord">
  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
+		<table tableName="m_file" domainObjectName="MFile">
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
 </context>
 </generatorConfiguration>
