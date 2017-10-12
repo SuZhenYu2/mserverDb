@@ -101,5 +101,8 @@ jdbc.password=lenovo2015 -->
 		<table tableName="m_file" domainObjectName="MFile">
  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
+		<table tableName="m_waste_list" domainObjectName="MWasteList">
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
 </context>
 </generatorConfiguration>
