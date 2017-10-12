@@ -102,6 +102,7 @@ jdbc.password=lenovo2015 -->
  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table tableName="m_waste_list" domainObjectName="MWasteList">
+			<property name="useActualColumnNames" value="true"/>
  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 </context>
