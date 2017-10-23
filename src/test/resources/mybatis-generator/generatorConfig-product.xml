@@ -108,5 +108,8 @@ jdbc.password=lenovo2015 -->
 		<table tableName="m_automatic_water" domainObjectName="MAutomaticWater">
   			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
+		<table tableName="m_company_ext_wx" domainObjectName="MCompanyExtWx">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
 </context>
 </generatorConfiguration>
