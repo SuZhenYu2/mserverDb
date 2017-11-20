@@ -4,7 +4,7 @@
 
 	<groupId>com.mserver.db</groupId>
 	<artifactId>mserverDbSupport</artifactId>
-	<version>0.1.2-${project.environment}</version>
+	<version>0.1.3-${project.environment}</version>
 	<packaging>jar</packaging>
 
 	<name>logsData</name>
