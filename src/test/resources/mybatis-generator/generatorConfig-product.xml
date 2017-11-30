@@ -111,5 +111,14 @@ jdbc.password=lenovo2015 -->
 		<table tableName="m_company_ext_wx" domainObjectName="MCompanyExtWx">
   			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
+		<table tableName="m_company_smscontent" domainObjectName="MCompanySmsContent">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_business_recycle_type" domainObjectName="MBusinessRecycleType">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_business_recycle_type_grade" domainObjectName="MBusinessRecycleTypeGrade">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
 </context>
 </generatorConfiguration>

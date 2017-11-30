@@ -19,7 +19,7 @@ public class GenerateUdMapperTool {
 	public static void main(String[] args) throws Exception {  
 	    // 项目中jar包所在物理路径  
 		//D:/Dev/Repository/com/lenovo/btcp/btcpDbSupport/btcpDbSupport/0.0.1/btcpDbSupport-0.0.1.jar
-	    String jarName = "D:/logs/maven-repo/Repository/com/mserver/db/mserverDbSupport/0.1.0-product/mserverDbSupport-0.1.0-product.jar";  
+	    String jarName = "D:/logs/maven-repo/Repository/com/mserver/db/mserverDbSupport/0.1.5-product/mserverDbSupport-0.1.5-product.jar";  
 	    @SuppressWarnings("resource")
 		JarFile jarFile = new JarFile(jarName);  
 	    Enumeration<JarEntry> entrys = jarFile.entries();  
