@@ -33,7 +33,7 @@
 	<!-- 	jdbc.username=sys_temp
 jdbc.password=lenovo2015 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://mei20141114.mysql.rds.aliyuncs.com/yunpingtai"
+			connectionURL="jdbc:mysql://mei20171208.mysql.rds.aliyuncs.com:3306/yunpingtai"
 			userId="dev"
 			password="Developer!#%&amp;2015">
 		</jdbcConnection>
@@ -118,6 +118,15 @@ jdbc.password=lenovo2015 -->
   			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table tableName="m_business_recycle_type_grade" domainObjectName="MBusinessRecycleTypeGrade">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_money_recycle_type" domainObjectName="MMoneyRecycleType">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="user" domainObjectName="User">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_pack" domainObjectName="MPack">
   			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 </context>
