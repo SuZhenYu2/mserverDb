@@ -129,5 +129,8 @@ jdbc.password=lenovo2015 -->
 		<table tableName="m_pack" domainObjectName="MPack">
   			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
+		<table tableName="m_wasteruku_list" domainObjectName="MWasterukuList">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
 </context>
 </generatorConfiguration>
