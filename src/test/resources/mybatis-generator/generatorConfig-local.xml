@@ -54,7 +54,7 @@ jdbc.password=lenovo2015 -->
 		</javaClientGenerator>
 
 		 
-		<table tableName="m_citizen_recharge_product" domainObjectName="MCitizenRechargeProduct">
+			<table tableName="m_citizen_recharge_product" domainObjectName="MCitizenRechargeProduct">
 			<property name="useActualColumnNames" value="true"/>
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
@@ -71,7 +71,7 @@ jdbc.password=lenovo2015 -->
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		<table tableName="m_citizen" domainObjectName="MCitizen">
-			<property name="useActualColumnNames" value="true"/>
+			<!-- <property name="useActualColumnNames" value="true"/> -->
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 		 
@@ -82,6 +82,72 @@ jdbc.password=lenovo2015 -->
 		<table tableName="weixin_user" domainObjectName="WeixinUser">
 			<property name="useActualColumnNames" value="true"/>
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_company" domainObjectName="MCompany">
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_node_location" domainObjectName="MNodeLocation">
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_worker_location_record" domainObjectName="MWorkerLocationRecord">
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_goods_list" domainObjectName="MGoodsList">
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_userbuy_record" domainObjectName="MUserbuyRecord">
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_file" domainObjectName="MFile">
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_waste_list" domainObjectName="MWasteList">
+			<property name="useActualColumnNames" value="true"/>
+ 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_automatic_water" domainObjectName="MAutomaticWater">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_company_ext_wx" domainObjectName="MCompanyExtWx">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_company_smscontent" domainObjectName="MCompanySmsContent">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_business_recycle_type" domainObjectName="MBusinessRecycleType">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_business_recycle_type_grade" domainObjectName="MBusinessRecycleTypeGrade">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_money_recycle_type" domainObjectName="MMoneyRecycleType">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="user" domainObjectName="User">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_pack" domainObjectName="MPack">
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_wasteruku_list" domainObjectName="MWasterUkuList">
+			<property name="useActualColumnNames" value="true"/>
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_wastechuku_list" domainObjectName="MWasteChuKuList">
+			<property name="useActualColumnNames" value="true"/>
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_partners" domainObjectName="MPartners">
+			<property name="useActualColumnNames" value="true"/>
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_car" domainObjectName="MCar">
+			<property name="useActualColumnNames" value="true"/>
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="m_userinfo" domainObjectName="MUserInfo">
+			<property name="useActualColumnNames" value="true"/>
+  			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 </context>
 </generatorConfiguration>
