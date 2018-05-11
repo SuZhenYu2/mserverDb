@@ -35,6 +35,12 @@
 				<project.environment>product</project.environment>
 			</properties>
 		</profile>
+		<profile>
+			<id>shanghai</id>
+			<properties>
+				<project.environment>shanghai</project.environment>
+			</properties>
+		</profile>
 	</profiles>
 	<dependencies>
 		<dependency>
